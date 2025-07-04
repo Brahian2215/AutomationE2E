@@ -14,14 +14,21 @@ import static co.edu.udea.certificacion.monitoreoyreportes.userinterfaces.UiDato
 
 public class SeeDataFlota implements Interaction {
 
-    @Override
-    public <T extends Actor> void performAs(T t) {
-        t.attemptsTo(Enter.theValue("Cootranscol").into(INPUT_TEXT).thenHit(Keys.RETURN));
-        t.attemptsTo(Click.on(BUTTON_FIND));
+    private final String nombreFlota;
 
+    public SeeDataFlota(String nombreFlota) {
+        this.nombreFlota = nombreFlota;
     }
 
-    public static SeeDataFlota dataFlota() {
-        return Tasks.instrumented(SeeDataFlota.class);
+    @Override
+    public <T extends Actor> void performAs(T actor) {
+        actor.attemptsTo(
+                Enter.theValue(nombreFlota).into(INPUT_TEXT).thenHit(Keys.RETURN),
+                Click.on(BUTTON_FIND)
+        );
+    }
+
+    public static SeeDataFlota withName(String nombreFlota) {
+        return Tasks.instrumented(SeeDataFlota.class, nombreFlota);
     }
 }

@@ -7,12 +7,18 @@ import net.serenitybdd.screenplay.Tasks;
 
 public class FindThe implements Task {
 
-    @Override
-    public <T extends Actor> void performAs(T t) {
-        t.attemptsTo(SeeDataFlota.dataFlota());
+    private final String nombreFlota;
+
+    public FindThe(String nombreFlota) {
+        this.nombreFlota = nombreFlota;
     }
 
-    public static FindThe infoFlotaPage(){
-        return Tasks.instrumented(FindThe.class);
+    @Override
+    public <T extends Actor> void performAs(T actor) {
+        actor.attemptsTo(SeeDataFlota.withName(nombreFlota));
+    }
+
+    public static FindThe infoFlotaPage(String nombreFlota){
+        return Tasks.instrumented(FindThe.class, nombreFlota);
     }
 }

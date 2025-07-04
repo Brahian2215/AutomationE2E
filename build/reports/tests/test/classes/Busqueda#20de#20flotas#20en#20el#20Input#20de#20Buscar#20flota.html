@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">2</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">2</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.774s</div>
+<div class="counter">5.852s</div>
 <p>duration</p>
 </div>
 </td>
@@ -73,8 +73,8 @@
 <div class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="Consultar una flota por nombre"></a>
-<h3 class="failures">Consultar una flota por nombre</h3>
+<a name="Buscar una flota que no existe"></a>
+<h3 class="failures">Buscar una flota que no existe</h3>
 <span class="code">
 <pre>java.lang.AssertionError: 
 Expected: &lt;true&gt;
@@ -82,7 +82,22 @@ Expected: &lt;true&gt;
 	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
 	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
 	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)
-	at co.edu.udea.certificacion.monitoreoyreportes.stepdefinitions.BuscarFlotaStepDefinition.muestraInformacionFlota(BuscarFlotaStepDefinition.java:48)
+	at co.edu.udea.certificacion.monitoreoyreportes.stepdefinitions.BuscarFlotaStepDefinition.mensajeNoResultados(BuscarFlotaStepDefinition.java:54)
+	at ✽.deberia ver un mensaje indicando que no hay resultados(file:///C:/Users/Atenas/Desktop/Automation/src/test/resources/features/buscar_flota.feature:20)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Consultar una flota válida por nombre"></a>
+<h3 class="failures">Consultar una flota válida por nombre</h3>
+<span class="code">
+<pre>java.lang.AssertionError: 
+Expected: &lt;true&gt;
+     but: was &lt;false&gt;
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)
+	at co.edu.udea.certificacion.monitoreoyreportes.stepdefinitions.BuscarFlotaStepDefinition.muestraInformacionFlota(BuscarFlotaStepDefinition.java:49)
 	at ✽.deberia ver la información de dicha flota en la tabla(file:///C:/Users/Atenas/Desktop/Automation/src/test/resources/features/buscar_flota.feature:14)
 </pre>
 </span>
@@ -99,8 +114,13 @@ Expected: &lt;true&gt;
 </tr>
 </thead>
 <tr>
-<td class="failures">Consultar una flota por nombre</td>
-<td class="failures">0.774s</td>
+<td class="failures">Buscar una flota que no existe</td>
+<td class="failures">5.172s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">Consultar una flota válida por nombre</td>
+<td class="failures">0.680s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -114,7 +134,7 @@ Expected: &lt;true&gt;
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
    |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
 
-Consultar una flota por nombre(busqueda-de-flotas-en-el-input-de-buscar-flota;consultar-una-flota-por-nombre)
+Consultar una flota válida por nombre(busqueda-de-flotas-en-el-input-de-buscar-flota;consultar-una-flota-válida-por-nombre)
 --------------------------------------------------------------------------------
 [Test worker] ERROR  - ?[91m
   _____   ___   ___   _____     ___     _     ___   _      ___   ___  
@@ -122,9 +142,27 @@ Consultar una flota por nombre(busqueda-de-flotas-en-el-input-de-buscar-flota;co
    | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
    |_|   |___| |___/   |_|     |_|   /_/ \_\ |___| |____| |___| |___/ 
 
-Consultar una flota por nombre
+Consultar una flota válida por nombre
 -----------------------------------------------------------------------?[0m
 [Test worker] ERROR  - ?[91m    Test failed at step: Then validation see data flota should be (true)?[0m
+[Test worker] ERROR  - ?[91m    Expected: &lt;true&gt; but: was &lt;false&gt;?[0m
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Buscar una flota que no existe(busqueda-de-flotas-en-el-input-de-buscar-flota;buscar-una-flota-que-no-existe)
+--------------------------------------------------------------------------------
+[Test worker] ERROR  - ?[91m
+  _____   ___   ___   _____     ___     _     ___   _      ___   ___  
+ |_   _| | __| / __| |_   _|   | __|   /_\   |_ _| | |    | __| |   \ 
+   | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___| |____| |___| |___/ 
+
+Buscar una flota que no existe
+-----------------------------------------------------------------------?[0m
+[Test worker] ERROR  - ?[91m    Test failed at step: Then validation no data flota should be (true)?[0m
 [Test worker] ERROR  - ?[91m    Expected: &lt;true&gt; but: was &lt;false&gt;?[0m
 </pre>
 </span>
@@ -137,7 +175,7 @@ Consultar una flota por nombre
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.13</a> at 4/07/2025, 1:19:07 a. m.</p>
+<a href="https://www.gradle.org">Gradle 8.13</a> at 4/07/2025, 4:02:25 p. m.</p>
 </div>
 </div>
 </body>

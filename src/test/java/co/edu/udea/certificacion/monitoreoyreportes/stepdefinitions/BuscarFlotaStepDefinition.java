@@ -1,5 +1,6 @@
 package co.edu.udea.certificacion.monitoreoyreportes.stepdefinitions;
 
+import co.edu.udea.certificacion.monitoreoyreportes.questions.ValidationNoDataFlota;
 import co.edu.udea.certificacion.monitoreoyreportes.questions.ValidationSeeDataFlota;
 import co.edu.udea.certificacion.monitoreoyreportes.tasks.FindThe;
 import io.cucumber.java.Before;
@@ -38,14 +39,19 @@ public class BuscarFlotaStepDefinition {
         usuario.can(BrowseTheWeb.with(driver));
     }
 
-    @When("busca una flota con el nombre Cootranscol")
-    public void buscarFlotaPorNombre(){
-        usuario.attemptsTo(FindThe.infoFlotaPage());
+    @When("busca una flota con el nombre {string}")
+    public void buscarFlotaPorNombre(String nombre) {
+        usuario.attemptsTo(FindThe.infoFlotaPage(nombre));
     }
 
     @Then("deberia ver la información de dicha flota en la tabla")
-    public void muestraInformacionFlota(){
-        usuario.should(seeThat(ValidationSeeDataFlota.dataFlota(),equalTo(true)));
+    public void muestraInformacionFlota() {
+        usuario.should(seeThat(ValidationSeeDataFlota.dataFlota(), equalTo(true)));
+    }
+
+    @Then("deberia ver un mensaje indicando que no hay resultados")
+    public void mensajeNoResultados() {
+        usuario.should(seeThat(ValidationNoDataFlota.noDataFlota(), equalTo(true)));
     }
 
 }
