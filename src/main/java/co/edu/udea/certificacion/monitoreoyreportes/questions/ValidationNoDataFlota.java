@@ -8,10 +8,6 @@ import static co.edu.udea.certificacion.monitoreoyreportes.userinterfaces.UiDato
 
 public class ValidationNoDataFlota implements Question<Boolean> {
 
-    // Localizador que apunta a las filas de resultados de la tabla
-    private static final Target FILAS_TABLA = Target.the("Filas de la tabla")
-            .locatedBy("//table/tbody/tr"); // Asegúrate de que esta ruta XPath sea correcta en tu aplicación
-
     @Override
     public Boolean answeredBy(Actor actor) {
         return VD_NO_DATA.resolveFor(actor).isVisible();

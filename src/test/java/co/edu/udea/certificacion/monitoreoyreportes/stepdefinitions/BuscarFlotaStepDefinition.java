@@ -32,11 +32,9 @@ public class BuscarFlotaStepDefinition {
         usuario.can(BrowseTheWeb.with(driver));
     }
 
-    //@Given("This method is responsible for parameterizing the instantiation of chromedriver")    public void thisMethodIsResponsibleForParameterizingTheInstantiationOfChromedriver() {         OnStage.theActorInTheSpotlight().wasAbleTo(Open.browserOn().thePageNamed("pages.swaglabsUrl"));    }
-
     @Given("que el usuario accede a la aplicacion en la GUI de Informacion de Flotas")
     public void informacionFlotaGui(){
-        usuario.can(BrowseTheWeb.with(driver));
+        usuario.wasAbleTo(Open.url("https://p1-f5-fleet-guard360-feature5.vercel.app/hu01"));
     }
 
     @When("busca una flota con el nombre {string}")

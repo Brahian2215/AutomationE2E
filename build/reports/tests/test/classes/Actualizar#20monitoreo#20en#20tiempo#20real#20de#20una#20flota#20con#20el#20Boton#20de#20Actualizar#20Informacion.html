@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - Class Busqueda de flotas en el Input de Buscar flota</title>
+<title>Test results - Class Actualizar monitoreo en tiempo real de una flota con el Boton de Actualizar Informacion</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>Class Busqueda de flotas en el Input de Buscar flota</h1>
+<h1>Class Actualizar monitoreo en tiempo real de una flota con el Boton de Actualizar Informacion</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/default-package.html">default-package</a> &gt; Busqueda de flotas en el Input de Buscar flota</div>
+<a href="../packages/default-package.html">default-package</a> &gt; Actualizar monitoreo en tiempo real de una flota con el Boton de Actualizar Informacion</div>
 <div id="summary">
 <table>
 <tr>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">5.852s</div>
+<div class="counter">7.723s</div>
 <p>duration</p>
 </div>
 </td>
@@ -73,8 +73,8 @@
 <div class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="Buscar una flota que no existe"></a>
-<h3 class="failures">Buscar una flota que no existe</h3>
+<a name="Actualizar informacion de monitoreo de una flota"></a>
+<h3 class="failures">Actualizar informacion de monitoreo de una flota</h3>
 <span class="code">
 <pre>java.lang.AssertionError: 
 Expected: &lt;true&gt;
@@ -82,14 +82,14 @@ Expected: &lt;true&gt;
 	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
 	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
 	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)
-	at co.edu.udea.certificacion.monitoreoyreportes.stepdefinitions.BuscarFlotaStepDefinition.mensajeNoResultados(BuscarFlotaStepDefinition.java:54)
-	at ✽.deberia ver un mensaje indicando que no hay resultados(file:///C:/Users/Atenas/Desktop/Automation/src/test/resources/features/buscar_flota.feature:20)
+	at co.edu.udea.certificacion.monitoreoyreportes.stepdefinitions.MonitoreoFlotaStepDefinition.muestraMonitoreoActualizado(MonitoreoFlotaStepDefinition.java:46)
+	at ✽.deberia ver la informacion de monitoreo de flotas actualizada en tiempo real(file:///C:/Users/Atenas/Desktop/Automation/src/test/resources/features/monitoreo_flota.feature:13)
 </pre>
 </span>
 </div>
 <div class="test">
-<a name="Consultar una flota válida por nombre"></a>
-<h3 class="failures">Consultar una flota válida por nombre</h3>
+<a name="Fallo en la actualizacion de monitoreo de una flota"></a>
+<h3 class="failures">Fallo en la actualizacion de monitoreo de una flota</h3>
 <span class="code">
 <pre>java.lang.AssertionError: 
 Expected: &lt;true&gt;
@@ -97,8 +97,8 @@ Expected: &lt;true&gt;
 	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
 	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
 	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)
-	at co.edu.udea.certificacion.monitoreoyreportes.stepdefinitions.BuscarFlotaStepDefinition.muestraInformacionFlota(BuscarFlotaStepDefinition.java:49)
-	at ✽.deberia ver la información de dicha flota en la tabla(file:///C:/Users/Atenas/Desktop/Automation/src/test/resources/features/buscar_flota.feature:14)
+	at co.edu.udea.certificacion.monitoreoyreportes.stepdefinitions.MonitoreoFlotaStepDefinition.mensajeFalloActualizacion(MonitoreoFlotaStepDefinition.java:51)
+	at ✽.deberia ver un mensaje indicando que la informacion no pudo ser actualizada(file:///C:/Users/Atenas/Desktop/Automation/src/test/resources/features/monitoreo_flota.feature:18)
 </pre>
 </span>
 </div>
@@ -114,13 +114,13 @@ Expected: &lt;true&gt;
 </tr>
 </thead>
 <tr>
-<td class="failures">Buscar una flota que no existe</td>
-<td class="failures">5.172s</td>
+<td class="failures">Actualizar informacion de monitoreo de una flota</td>
+<td class="failures">5.193s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="failures">Consultar una flota válida por nombre</td>
-<td class="failures">0.680s</td>
+<td class="failures">Fallo en la actualizacion de monitoreo de una flota</td>
+<td class="failures">2.530s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -134,17 +134,23 @@ Expected: &lt;true&gt;
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
    |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
 
-Consultar una flota válida por nombre(busqueda-de-flotas-en-el-input-de-buscar-flota;consultar-una-flota-válida-por-nombre)
+Actualizar informacion de monitoreo de una flota(actualizar-monitoreo-en-tiempo-real-de-una-flota-con-el-boton-de-actualizar-informacion;actualizar-informacion-de-monitoreo-de-una-flota)
 --------------------------------------------------------------------------------
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \n                   --disa..., --disable-default-apps, --disable-extensions-file-a..., \n                   --inco..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
+jul 04, 2025 10:17:20 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+jul 04, 2025 10:17:20 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] ERROR  - ?[91m
   _____   ___   ___   _____     ___     _     ___   _      ___   ___  
  |_   _| | __| / __| |_   _|   | __|   /_\   |_ _| | |    | __| |   \ 
    | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
    |_|   |___| |___/   |_|     |_|   /_/ \_\ |___| |____| |___| |___/ 
 
-Consultar una flota válida por nombre
+Actualizar informacion de monitoreo de una flota
 -----------------------------------------------------------------------?[0m
-[Test worker] ERROR  - ?[91m    Test failed at step: Then validation see data flota should be (true)?[0m
+[Test worker] ERROR  - ?[91m    Test failed at step: Then validation monitoreo actualizado should be (true)?[0m
 [Test worker] ERROR  - ?[91m    Expected: &lt;true&gt; but: was &lt;false&gt;?[0m
 [Test worker] INFO  - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
@@ -152,7 +158,7 @@ Consultar una flota válida por nombre
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
    |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
 
-Buscar una flota que no existe(busqueda-de-flotas-en-el-input-de-buscar-flota;buscar-una-flota-que-no-existe)
+Fallo en la actualizacion de monitoreo de una flota(actualizar-monitoreo-en-tiempo-real-de-una-flota-con-el-boton-de-actualizar-informacion;fallo-en-la-actualizacion-de-monitoreo-de-una-flota)
 --------------------------------------------------------------------------------
 [Test worker] ERROR  - ?[91m
   _____   ___   ___   _____     ___     _     ___   _      ___   ___  
@@ -160,9 +166,9 @@ Buscar una flota que no existe(busqueda-de-flotas-en-el-input-de-buscar-flota;bu
    | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
    |_|   |___| |___/   |_|     |_|   /_/ \_\ |___| |____| |___| |___/ 
 
-Buscar una flota que no existe
+Fallo en la actualizacion de monitoreo de una flota
 -----------------------------------------------------------------------?[0m
-[Test worker] ERROR  - ?[91m    Test failed at step: Then validation no data flota should be (true)?[0m
+[Test worker] ERROR  - ?[91m    Test failed at step: Then validation no data monitoreo should be (true)?[0m
 [Test worker] ERROR  - ?[91m    Expected: &lt;true&gt; but: was &lt;false&gt;?[0m
 </pre>
 </span>
@@ -175,7 +181,7 @@ Buscar una flota que no existe
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.13</a> at 4/07/2025, 4:02:25 p. m.</p>
+<a href="https://www.gradle.org">Gradle 8.13</a> at 4/07/2025, 10:17:28 p. m.</p>
 </div>
 </div>
 </body>
